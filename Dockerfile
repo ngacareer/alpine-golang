@@ -11,7 +11,7 @@ FROM ngacareer/alpine-curl
 
 ENV GO_VERSION 1.16
 RUN apk add --no-cache --virtual .build-deps bash gcc musl-dev openssl go 
-RUN curl -O go.tgz -L https://dl.google.com/go/go$GO_VERSION.src.tar.gz && \
+RUN curl -O go.tgz -L https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz && \
     tar -C /usr/local -xzf go.tgz && \ 
     cd /usr/local/go/src/ && \
     ./make.bash
