@@ -17,17 +17,17 @@ Linux lightweight, Golang environment.
 ```
 docker run -itd --name alpine-golang ngacareer/alpine-golang
 docker exec -it alpine-golang sh
-# curl https://ngacareer.com
+# go version
  ```
 - On Kubernetes
  ```
 kubectl run alpine-golang --image=ngacareer/alpine-golang
 kubectl exec -it alpine-golang sh
-#curl https://ngacareer
+# go version
  ```
 - On OpenShift
  ```
 oc run alpine-golang --image=ngacareer/alpine-golang
 oc exec alpine-golang  -i -t sh
-#curl https://ngacareer.com
+# go version
  ```
