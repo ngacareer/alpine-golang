@@ -24,4 +24,3 @@ RUN apk del .build-deps
 RUN go version
 
 ENTRYPOINT ["entrypoint.sh"]
-RUN ["cmd"]
