@@ -13,6 +13,7 @@ ENV GO_VERSION 1.16
 RUN apk add --no-cache --virtual .build-deps bash gcc musl-dev openssl go 
 RUN curl -o go$GO_VERSION.linux-amd64.tar.gz -L https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz && \
     tar -C /usr/local -zxvf go$GO_VERSION.linux-amd64.tar.gz && \
+    rm go$GO_VERSION.linux-amd64.tar.gz && \    
     cd /usr/local/go/src/ && \
     ./make.bash
 
